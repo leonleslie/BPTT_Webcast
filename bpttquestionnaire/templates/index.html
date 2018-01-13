@@ -1,0 +1,44 @@
+{%extends "base.html"%}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+
+{%block 1%}
+<br>
+<center>
+<table class = "table table-bordered" style="width:70%"> 
+
+<tr>
+	<th><h1>Test</h1></th>
+	<th><h1>Test2</h1></th>
+</tr>
+
+</table>
+</center>
+<center><h2><b>Questions</b></h2></center>
+<center>
+<table class = "table table-bordered" style="width:70%">
+<form method = 'POST' action =''>{% csrf_token %}
+<tr>
+<th>
+{{questform|crispy}}
+</th>
+<br>
+
+
+<table class="table table-bordered" style="width:70%">
+<tr>
+	<th>
+	<button type="submit" class="btn btn-primary btn-block btn-lg">Submit</button>	
+	
+	</th>
+
+</tr>
+</table>	
+
+</tr>
+</form>
+</table>
+</center>
+
+{%endblock%}
