@@ -5,8 +5,8 @@ class questionform(forms.ModelForm):
 	class Meta:
 		model = bpquestions
 		fields = [
-			'name',
-			'question',
+			"name",
+			"question",
 			
 
 		]

@@ -127,3 +127,5 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static_cdn")
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
