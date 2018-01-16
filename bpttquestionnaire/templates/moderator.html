@@ -5,47 +5,39 @@
 {%block title%}<center><h1><b>Moderator</b></h1></center>{%endblock%}
 
 {%block 1%}
-<center>
-<table class="table table-bordered" style="width:70%">
-<tr>
-<td>
-<h3>
-<table class="table table-bordered " style="width:100%">
-<tr bgcolor="lightgreen">
-<th>Number</th><td>{{modview.id}}</td>
-</tr>
-<tr>
-<th>Time</th><td><b><i>{{modview.time}}</i></b></td>
-</tr>
-<tr>
-<th>Name</th><td><b><i>{{modview.name}}</i></b></td>
-</tr>
-<tr>
-<th>Question</th><td>{{modview.question}}</td>
-</tr>
-</table>
-</h3>
-</td>
-</tr>
 
-</table>
+    <div class="webcast-content-section">
+        <div class="container-fluid">
+            <div class="webcast-content">
+                <h2>Question Details</h2>
+                <table class="table-responsive incoming-question">
+                    <tr>
+                        <th>Number</th>
+                        <th>{{modview.id}}</th>
+                    </tr>
+                    <tr>
+                        <td>Time</td>
+                        <td>{{modview.time}}</td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>{{modview.name}}</td>
+                    </tr>
+                    <tr>
+                        <td>Question</td>
+                        <td>{{modview.question}}</td>
+                    </tr>
+                </table>
+                <div class="incoming-button">
+		<form method = 'POST' action =''>{% csrf_token %}
+			<input type="button" class="btn btn-success btn-block btn-lg" value="Back" onclick="javascript:history.go(-1);" class="btn btn-primary"/>
+		</form>
+		<form method = 'GET' action ="deletequest">{% csrf_token %}
+			<button type="submit" class="btn btn-success btn-block btn-lg">Delete</button>
+		</form>
 
-
-<table class="table table-bordered" style="width:70%">
-<tr>
-<td>
-<form method = 'POST' action =''>{% csrf_token %}
-<input type="button" class="btn btn-primary btn-block btn-lg" value="Back" onclick="javascript:history.go(-1);" class="btn btn-primary"/>
-</form>
-</td>
-<td>
-<form method = 'GET' action ="deletequest">{% csrf_token %}
-<button type="submit" class="btn btn-primary btn-block btn-lg">Delete</button>
-</form>
-</td>
-</tr>
-</table>
-</center>
-
-
+                </div>
+            </div>
+        </div>
+    </div>
 {%endblock%}

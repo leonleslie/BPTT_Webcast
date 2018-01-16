@@ -1,0 +1,287 @@
+/*------------------------------------------------------------------
+Common Stylesheet
+
+Project:   Theme Name
+Build:     Bootstrap 3.3.7
+Author:    Enamul Haque
+Author URL: http://www.enamul.me
+
+-------------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+    typography
+-----------------------------------------------------------------*/
+
+
+
+a:active,
+a:focus,
+input,
+select,
+textarea {
+    outline: none !important;
+}
+
+img {
+    max-width: 100%;
+}
+
+a,
+.container {
+    text-decoration: none !important;
+    transition: all .5s;
+}
+
+a:hover,
+a:focus {
+    color: #323232;
+}
+
+a:hover,
+.btn,
+button,
+.btn:hover {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1, h2, h3, p{
+    margin: 0;
+}
+
+.container-fluid {
+	padding: 0 60px;
+}
+
+/*================ Start Header Section ================*/
+.webcast-header-section {
+    box-shadow: 0px 5px 10px 0px #d4d4d4;
+    padding: 10px 0;
+}
+
+.incoming-question2-head,
+.webcast-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a h2 {
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.logo a {
+	display: flex;
+	color: #333;
+	align-items: center;
+}
+
+.menu-bar a {
+	display: inline-block;
+	padding: 0 5px;
+}
+
+.logo img{
+	width: 70px;
+}
+
+.menu-bar img{
+    width: 10px;
+}
+
+.incoming-question tr:first-child {
+    background: #b5dfc6;
+}
+
+.incoming-question {
+	width: 100%;
+}
+
+.incoming-question tr td:first-child {
+	width: 150px;
+}
+
+.incoming-question {
+	border-collapse: collapse;
+	margin: 30px 0;
+}
+
+.incoming-question2 th, .incoming-question2 td,
+.incoming-question th, .incoming-question td {
+	border: 1px solid #cac9cc;
+	padding: 10px;
+	color: #231f20;
+	font-weight: 500;
+	font-size: 17px;
+}
+
+.incoming-button {
+	display: flex;
+	justify-content: space-between;
+}
+
+.incoming-question2-head a,
+.incoming-button a {
+	color: #fff;
+	background: #149d49;
+	padding: 7px;
+	display: inline-block;
+	width: 140px;
+	text-align: center;
+	border-radius: 30px;
+	font-size: 18px;
+}
+
+.webcast-content-section {
+	padding: 50px 0;
+}
+
+.incoming-question2 {
+	border-collapse: collapse;
+	width: 100%;
+	margin-top: 20px;
+}
+
+.webcast-media{
+	display: flex;
+	justify-content: space-between;
+}
+
+.webcast-media a {
+	display: inline-block;
+	width: 49%;
+	border: 1px solid #231F20;
+}
+
+.input-field-right a {
+	color: #fff;
+	background: #149d49;
+	padding: 10px;
+	display: inline-block;
+	width: 140px;
+	text-align: center;
+	border-radius: 15px;
+	font-size: 18px;
+}
+
+.input-field-left input {
+	border: 1px solid #231f20;
+	border-radius: 10px;
+	padding: 11px;
+	font-size: 18px;
+	width: 100%;
+}
+
+.input-field-left,
+.input-section {
+	display: flex;
+	justify-content: space-between;
+}
+
+.input-field-right {
+	margin-left: 30px;
+}
+
+.input-field-left{
+	width: calc(100% - 170px);
+}
+
+.name-input {
+	width: 200px !important;
+	margin-right: 15px;
+}
+
+.question-input{
+	width: calc(100% - 215px);
+}
+.input-section {
+	margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width: 991px){
+	.container-fluid {
+		padding: 0 15px;
+	}
+}
+
+@media all and (max-width: 767px){
+
+	.webcast-media{
+		display: block;
+	}
+	.webcast-media a{
+		width: 100%;
+		margin: 5px 0;
+	}
+}
+
+@media all and (max-width: 630px){
+	.input-field-left,
+	.input-field-right,
+	.input-name,
+	.input-section,
+	.input-section input{
+		width: 100% !important;
+		display: block !important;
+	}
+	.input-field-right{
+		margin: 0;
+	}
+	.input-section input{
+		margin: 8px 0;
+	}
+}
+
+@media all and (max-width: 500px){
+    .logo a h2 {
+        display: inline-block;
+        margin-left: 10px;
+        font-size: 22px;
+    }
+    .logo a img{
+        width: 50px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

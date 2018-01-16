@@ -2,44 +2,38 @@
 {% load staticfiles %}
 {% load crispy_forms_tags %}
 
-{%block title%}<center><h1><b>Moderator</b></h1></center>{%endblock%}
+{%block title%}Moderator - Incoming Questions{%endblock%}
 
 {%block 1%}
-<h3>
-<table class="table table-boarded" style="width:100%">
-<thead bgcolor="lightgreen">
-<th>Number</th>
-<th>Time</th>
-<th>Name</th>
-<th>Question</th>
 
-</thead>
-</tr>
+    <div class="webcast-content-section">
+        <div class="container-fluid">
+            <div class="webcast-content">
+                <div class="incoming-question2-head">
+                    <h2>Incoming Question</h2>
+			<form method = 'GET' action ="moderatorview">{% csrf_token %}
+			<button type="submit" class="btn btn-success btn-block btn-lg">Refresh</button>
+			</form>
+                </div>
 
-{%for i in modev%}
-<tr>
-<td>
-<a href="{% url 'moderator' id=i.id %}">{{i.id}}</a>
-</td>
-<td>
-{{i.time}}
-</td>
-<td>
-{{i.name}}
-</td>
-<td>
-{{i.question  | truncatewords:10}}
-</td>
-</tr>
-{%endfor%}
-
-</table>
-</h3>
-<center>
-<div style="width:40%">
-<form method = 'GET' action ="moderatorview">{% csrf_token %}
-<button type="submit" class="btn btn-primary btn-block btn-lg">Refresh</button>	
-</form>
-</div>
-</center>
+                <table class="table-responsive incoming-question2">
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Question</th>
+                        <th>Time</th>
+                    </tr>
+		    {%for i in modev%}
+                    <tr>
+				<td><a href="{% url 'moderator' id=i.id %}">{{i.id}}</a></td>
+				<td>{{i.name}}</td>
+				<td>{{i.question  | truncatewords:10}}</td>
+				<td>{{i.time}}</td>
+		   </tr>
+		  {%endfor%}
+                    <tr></tr>
+                </table>
+            </div>
+        </div>
+    </div>
 {%endblock%}

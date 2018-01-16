@@ -2,45 +2,29 @@
 {% load staticfiles %}
 {% load crispy_forms_tags %}
 
-{%block title%}<center><b><h1>Town Hall</h1></b></center>{%endblock%}
+{%block title%}Town Hall - Webcast{%endblock%}
 
 {%block 1%}
-<br>
-
-<center>
-<table class = "table table-bordered" style="width:70%"> 
-
-<tr>
-	<th><h1>Video Left</h1></th>
-	<th><h1>Video Right</h1></th>
-</tr>
-
-</table>
-</center>
-<center><h2><b>Questions</b></h2></center>
-<center>
-<table class = "table table-bordered" style="width:70%">
-<form method = 'POST' action =''>{% csrf_token %}
-<tr>
-<th>
-{{questform|crispy}}
-</th>
-<br>
-
-
-<table class="table table-bordered" style="width:70%">
-<tr>
-	<th>
-	<button type="submit" class="btn btn-primary btn-block btn-lg">Submit</button>	
-	
-	</th>
-
-</tr>
-</table>	
-
-</tr>
-</form>
-</table>
-</center>
+    <div class="webcast-content-section">
+        <div class="container-fluid">
+            <div class="webcast-content">
+                <div class="webcast-media">
+                    <a href=""><img src='{% static  "img/1.jpg" %}' alt=""></a>
+                    <a href=""><img src='{% static  "img/2.jpg" %}' alt=""></a>
+                </div>
+		<form method = 'POST' action =''>{% csrf_token %}
+                <div class="input-section">
+                    <div class="input-field-left">
+                        <input type="text" name="name" placeholder="Name" class="name-input">
+                        <input type="text" name="question" placeholder="Question" class="question-input">
+                    </div>
+                    <div class="input-field-right">
+        		<button type="submit" class="btn btn-success btn-block btn-lg">Submit</button>
+                    </div>
+                </div>
+            </div>
+          </form>
+        </div>
+    </div>
 
 {%endblock%}
